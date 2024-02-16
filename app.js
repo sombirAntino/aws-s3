@@ -6,7 +6,7 @@ import uploadfile from './s3.js';
 
 const app = express();
 app.use(multer().any());
-
+console.log("hi")
 app.post('/upload', async (req, res) => {
     const file = req.files[0];
     const resp = await uploadfile(file);
